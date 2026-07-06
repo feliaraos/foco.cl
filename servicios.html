@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mulish',system-ui,sans-serif;color:#5d6b78;background:#ffffff;-webkit-font-smoothing:antialiased;line-height:1.65}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  ::selection{background:#1fc299;color:#fff}
+  @keyframes focoPulse{0%,100%{opacity:1}50%{opacity:.45}}
+  @keyframes focoReveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="overflow-x:hidden">
+
+  <header style="{{ headerStyle }}">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center"><img src="https://foco.cl/wp-content/uploads/2025/03/head-L-foco_cl-scaled-1.jpg" alt="foco.cl" style="height:48px;width:auto;display:block"></a>
+      <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <a href="index.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Inicio</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:600;font-size:15px;color:#1fc299;padding:8px 14px;border-radius:8px">Servicios</a>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Experiencia</a>
+        <a href="index.html#contacto" style="font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#1fc299;padding:11px 22px;border-radius:9px;margin-left:8px;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 6px 18px -6px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(31,194,153,.7);background:#19b389">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position:relative;background:linear-gradient(160deg,#3d4f61 0%,#2f3e4e 100%);clip-path:polygon(0 0,100% 0,100% 90%,0 100%);padding:80px 0 70px;overflow:hidden">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;gap:60px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1 1 440px;min-width:300px" data-reveal>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Outfit';font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#1fc299;margin-bottom:18px"><span style="width:8px;height:8px;border-radius:50%;background:#ff4d4d;animation:focoPulse 1.5s ease-in-out infinite"></span>Transmite en vivo</span>
+        <h1 style="font-family:'Outfit';font-weight:800;font-size:clamp(34px,4.6vw,52px);line-height:1.08;letter-spacing:-1.3px;color:#fff;margin-bottom:22px;text-wrap:balance">Tu evento, visto desde cualquier parte del mundo</h1>
+        <p style="font-size:17px;line-height:1.75;color:#c2ccd4;max-width:560px;margin-bottom:16px">¿Organizas un seminario, lanzamiento, concierto o ceremonia y quieres darle un realce especial? Transmitimos en tiempo real, en formato televisivo y en alta calidad, para una experiencia única y envolvente.</p>
+        <p style="font-size:16px;line-height:1.75;color:#9fadb8;max-width:560px">Tenemos la experiencia, el equipamiento y el conocimiento para que tu evento sea visto en cualquier dispositivo, desde cualquier lugar.</p>
+      </div>
+      <div style="flex:1 1 360px;min-width:280px" data-reveal data-reveal-delay="150">
+        <img src="https://foco.cl/wp-content/uploads/2026/03/P1060262-scaled.jpg" alt="Transmisión en vivo de evento" style="width:100%;height:340px;object-fit:cover;border-radius:16px;box-shadow:0 28px 60px -22px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08)">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:84px 0 40px;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px">
+      <div style="max-width:720px;margin-bottom:50px" data-reveal>
+        <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9c8164">Transmisión multiplataforma</span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(28px,3.6vw,40px);line-height:1.12;letter-spacing:-1px;color:#38495b;margin:14px 0 18px">Emitimos en tus propias redes y sitio web</h2>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75">Amplia experiencia transmitiendo a Facebook Live, YouTube, Twitter, Zoom, Skype y más. Conocemos las ventajas y limitaciones de cada plataforma para asegurar una transmisión impecable.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+        <div data-reveal style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📱</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Estático y móvil</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Tu evento se visualiza desde cualquier dispositivo, en cualquier lugar.</p>
+        </div>
+        <div data-reveal data-reveal-delay="80" style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">👥</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Multiusuarios</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Capacidad de transmisión sin límite de espectadores.</p>
+        </div>
+        <div data-reveal data-reveal-delay="160" style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🎥</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Multicámara Full HD</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Equipamiento para múltiples cámaras: siempre los mejores planos.</p>
+        </div>
+        <div data-reveal style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📺</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Gráficas de TV</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Títulos animados, textos, imágenes y leyendas para un video de mayor impacto.</p>
+        </div>
+        <div data-reveal data-reveal-delay="80" style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🔊</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Sonido digital</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Audio de la mejor calidad, fundamental en cualquier evento.</p>
+        </div>
+        <div data-reveal data-reveal-delay="160" style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🖼️</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Multimedia</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Inserción de videos, fotos y presentaciones en la transmisión.</p>
+        </div>
+        <div data-reveal style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">🔗</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Videoconferencia</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Eventos híbridos combinando panel presencial con telemático.</p>
+        </div>
+        <div data-reveal data-reveal-delay="80" style="background:#f5f6f7;border:1px solid #e6e9ec;border-radius:15px;padding:30px 28px;transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateY(-6px);box-shadow:0 20px 44px -22px rgba(56,73,91,.45);background:#fff">
+          <div style="display:flex;align-items:center;gap:13px;margin-bottom:11px"><div style="width:42px;height:42px;border-radius:11px;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">⚙️</div><h3 style="font-family:'Outfit';font-weight:700;font-size:17px;color:#38495b;">Flexibilidad</h3></div>
+          <p style="font-size:14.5px;color:#6b7884;line-height:1.65">Configuraciones escalables según lugar, tipo de evento y presupuesto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:60px 0 84px;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:26px;flex-wrap:wrap" data-reveal>
+        <h2 style="font-family:'Outfit';font-weight:700;font-size:24px;color:#38495b">Algunos de nuestros trabajos</h2>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.4px;text-transform:uppercase;color:#fff;background:#1fc299;padding:13px 24px;border-radius:10px;display:inline-flex;align-items:center;gap:9px;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 8px 22px -8px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(31,194,153,.7);background:#19b389">Ver experiencia completa <span style="font-size:16px">→</span></a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px" data-reveal data-reveal-delay="100">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/IMG_20220310_173200-1024x462.jpg" alt="Trabajo foco.cl" style="width:100%;height:200px;object-fit:cover;border-radius:13px;transition:transform .35s,box-shadow .35s" style-hover="transform:scale(1.02);box-shadow:0 18px 40px -20px rgba(56,73,91,.5)">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/20220305_181356-1024x461.jpg" alt="Trabajo foco.cl" style="width:100%;height:200px;object-fit:cover;border-radius:13px;transition:transform .35s,box-shadow .35s" style-hover="transform:scale(1.02);box-shadow:0 18px 40px -20px rgba(56,73,91,.5)">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/festival-de-la-bici-1024x576.jpg" alt="Trabajo foco.cl" style="width:100%;height:200px;object-fit:cover;border-radius:13px;transition:transform .35s,box-shadow .35s" style-hover="transform:scale(1.02);box-shadow:0 18px 40px -20px rgba(56,73,91,.5)">
+        <img src="https://foco.cl/wp-content/uploads/2026/03/P1060262-1024x575.jpg" alt="Trabajo foco.cl" style="width:100%;height:200px;object-fit:cover;border-radius:13px;transition:transform .35s,box-shadow .35s" style-hover="transform:scale(1.02);box-shadow:0 18px 40px -20px rgba(56,73,91,.5)">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:84px 0;background:#f5f6f7">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;gap:60px;flex-wrap:wrap">
+      <div style="flex:1 1 360px;min-width:300px" data-reveal>
+        <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9c8164">Otros servicios</span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(28px,3.6vw,40px);line-height:1.12;letter-spacing:-1px;color:#38495b;margin:14px 0 18px">Más allá del streaming</h2>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75;margin-bottom:28px">Nos especializamos en la transmisión en vivo, pero también ofrecemos registro audiovisual de todo tipo de eventos.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:13px">
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600;font-family:'Mulish'"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>Transmisión en vivo</li>
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>CCTV para eventos</li>
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>Grabación de matrimonios</li>
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>Grabación de videos corporativos</li>
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>Registro audiovisual de conferencias</li>
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>Grabación de congresos y seminarios</li>
+          <li style="display:flex;align-items:center;gap:13px;font-size:15.5px;color:#465563;font-weight:600"><span style="width:26px;height:26px;flex-shrink:0;border-radius:7px;background:#1fc299;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800">✓</span>Filmación de licenciaturas</li>
+        </ul>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:700;font-size:15px;color:#1fc299;display:inline-flex;align-items:center;gap:8px;margin-top:26px;transition:gap .2s" style-hover="gap:13px">Mira todos estos trabajos en Experiencia <span style="font-size:17px">→</span></a>
+      </div>
+      <div style="flex:1 1 360px;min-width:300px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start" data-reveal data-reveal-delay="130">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/Academia-1024x462.jpg" alt="Registro audiovisual" style="width:100%;height:150px;object-fit:cover;border-radius:12px">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/cultocio-1024x682.jpg" alt="Registro audiovisual" style="width:100%;height:150px;object-fit:cover;border-radius:12px">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/gustavo-petro-en-Chile-1-1024x569.jpg" alt="Registro audiovisual" style="width:100%;height:150px;object-fit:cover;border-radius:12px">
+        <img src="https://foco.cl/wp-content/uploads/2026/03/P1060260--1024x527.jpg" alt="Registro audiovisual" style="width:100%;height:150px;object-fit:cover;border-radius:12px">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/guiaparalavidadeunabrujita-1.jpg" alt="Registro audiovisual" style="width:100%;height:150px;object-fit:cover;border-radius:12px">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/e9febce3-5282-43da-85c5-ccbbd61aefc8.jpg" alt="Registro audiovisual" style="width:100%;height:150px;object-fit:cover;border-radius:12px">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:88px 0;background:linear-gradient(160deg,#3d4f61 0%,#2f3e4e 100%)">
+    <div style="max-width:880px;margin:0 auto;padding:0 32px;text-align:center" data-reveal>
+      <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(28px,3.8vw,42px);letter-spacing:-1px;color:#fff;margin-bottom:16px;text-wrap:balance">¿Quieres transmitir en vivo?</h2>
+      <p style="font-size:17px;color:#b9c4cd;margin-bottom:34px;max-width:600px;margin-left:auto;margin-right:auto">Conversemos sobre cómo hacer que tu evento llegue a más personas.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="index.html#contacto" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#2f3e4e;background:#fff;padding:16px 30px;border-radius:11px;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)" style-hover="transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(0,0,0,.5)">Solicita una cotización</a>
+        <a href="https://wa.me/56976157196" target="_blank" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#25d366;padding:16px 30px;border-radius:11px;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px -8px rgba(37,211,102,.5)" style-hover="transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(37,211,102,.6)">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#283643;padding:54px 0 38px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap">
+      <a href="index.html" style="display:flex;align-items:center"><img src="logo-foco.png" alt="foco" style="height:46px;width:auto;display:block"></a>
+      <nav style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="index.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Inicio</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Servicios</a>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Experiencia</a>
+        <a href="index.html#contacto" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Contacto</a>
+      </nav>
+      <div style="display:flex;gap:12px">
+        <a href="http://instagram.com/focoenvivo.cl" target="_blank" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s,transform .2s" style-hover="background:#1fc299;transform:translateY(-3px)">📷</a>
+        <a href="http://facebook.com/foco.cl" target="_blank" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s,transform .2s" style-hover="background:#1fc299;transform:translateY(-3px)">f</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:32px auto 0;padding:24px 32px 0;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <span style="font-size:13px;color:#7b8893">© 2026 focoenvivo.cl / foco.cl · Streaming y proyectos audiovisuales · Santiago, Chile</span>
+      <span style="font-size:13px;color:#7b8893">Filmando, produciendo y transmitiendo desde 2003</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { scrolled: false };
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const apply = () => els.forEach(el => {
+      const d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+      el.style.animation = 'focoReveal .85s cubic-bezier(.16,.84,.44,1) ' + d + 'ms both';
+    });
+    apply();
+    requestAnimationFrame(apply);
+    this._safety = setTimeout(() => els.forEach(el => { el.style.animation = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; }), 1700);
+    this._onScroll = () => {
+      const s = window.scrollY > 20;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._safety) clearTimeout(this._safety);
+  }
+  renderVals() {
+    return {
+      headerStyle: 'position:sticky;top:0;z-index:50;background:rgba(255,255,255,' + (this.state.scrolled ? '.92' : '1') + ');backdrop-filter:blur(10px);border-bottom:1px solid ' + (this.state.scrolled ? '#e6e9ec' : 'transparent') + ';box-shadow:' + (this.state.scrolled ? '0 6px 24px -16px rgba(56,73,91,.5)' : 'none') + ';transition:box-shadow .3s,border-color .3s,background .3s',
+    };
+  }
+}
+</script>
+</body>
+</html>

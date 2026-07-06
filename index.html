@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mulish',system-ui,sans-serif;color:#5d6b78;background:#ffffff;-webkit-font-smoothing:antialiased;line-height:1.65}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  ::selection{background:#1fc299;color:#fff}
+  @keyframes focoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes focoPulse{0%,100%{opacity:1}50%{opacity:.45}}
+  @keyframes focoReveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="overflow-x:hidden">
+
+  <header style="{{ headerStyle }}">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center"><img src="https://foco.cl/wp-content/uploads/2025/03/head-L-foco_cl-scaled-1.jpg" alt="foco.cl" style="height:48px;width:auto;display:block"></a>
+      <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <a href="index.html" style="font-family:'Outfit';font-weight:600;font-size:15px;color:#1fc299;padding:8px 14px;border-radius:8px">Inicio</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Servicios</a>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Experiencia</a>
+        <a href="#contacto" style="font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#1fc299;padding:11px 22px;border-radius:9px;margin-left:8px;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 6px 18px -6px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(31,194,153,.7);background:#19b389">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position:relative;background:linear-gradient(160deg,#3d4f61 0%,#2f3e4e 100%);clip-path:polygon(0 0,100% 0,100% 88%,0 100%);padding-bottom:60px">
+    <div style="max-width:1180px;margin:0 auto;padding:90px 32px 70px;display:flex;gap:64px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1 1 420px;min-width:300px" data-reveal>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#1fc299;margin-bottom:20px">
+          <span style="width:8px;height:8px;border-radius:50%;background:#1fc299;animation:focoPulse 1.6s ease-in-out infinite"></span>En vivo desde Santiago
+        </span>
+        <h1 style="font-family:'Outfit';font-weight:800;font-size:clamp(38px,5vw,60px);line-height:1.05;letter-spacing:-1.5px;color:#fff;margin-bottom:24px;text-wrap:balance">Transmite tu evento en vivo</h1>
+        <p style="font-size:17px;line-height:1.7;color:#c2ccd4;max-width:520px;margin-bottom:18px">La virtualidad y la presencialidad ya son inseparables. Ofrecemos <em style="color:#fff;font-style:italic">streaming</em> de eventos en vivo para que tu mensaje llegue a una audiencia global, a todos los rincones del mundo.</p>
+        <p style="font-size:16px;line-height:1.7;color:#9fadb8;max-width:520px;margin-bottom:34px">Tecnología avanzada y amplia experiencia: desde congresos y asambleas hasta eventos musicales y deportivos, con calidad garantizada.</p>
+        <a href="#contacto" style="display:inline-flex;align-items:center;gap:10px;font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#2f3e4e;background:#fff;padding:16px 30px;border-radius:11px;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)" style-hover="transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(0,0,0,.5)">Solicita una cotización <span style="color:#1fc299">→</span></a>
+      </div>
+      <div style="flex:1 1 420px;min-width:300px" data-reveal data-reveal-delay="150">
+        <div style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08)">
+          <div style="position:absolute;top:14px;left:14px;z-index:2;display:flex;align-items:center;gap:7px;background:rgba(20,28,36,.78);backdrop-filter:blur(6px);padding:6px 13px;border-radius:8px">
+            <span style="width:8px;height:8px;border-radius:50%;background:#ff4d4d;animation:focoPulse 1.4s ease-in-out infinite"></span>
+            <span style="font-family:'Outfit';font-weight:700;font-size:11px;letter-spacing:1.5px;color:#fff">REC · EN VIVO</span>
+          </div>
+          <img src="https://foco.cl/wp-content/uploads/2026/03/P1060264-scaled.jpg" alt="Setup de transmisión multipantalla" style="width:100%;height:380px;object-fit:cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f5f6f7;padding:30px 0 86px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px">
+      <div data-reveal style="background:#fff;border:1px solid #e6e9ec;border-radius:16px;padding:42px 34px;transition:transform .3s,box-shadow .3s,border-color .3s" style-hover="transform:translateY(-8px);box-shadow:0 24px 50px -22px rgba(56,73,91,.4);border-color:#d6dce0">
+        <div style="width:74px;height:74px;border-radius:16px;background:#f7f2eb;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://foco.cl/wp-content/uploads/2025/03/servicios-bajocosto.png" alt="" style="width:44px;height:44px;object-fit:contain">
+        </div>
+        <h3 style="font-family:'Outfit';font-weight:700;font-size:19px;letter-spacing:.3px;color:#38495b;margin-bottom:13px">Eficiencia económica</h3>
+        <p style="font-size:15px;color:#6b7884;line-height:1.7">Tecnología de vanguardia para un servicio de alta calidad sin costos exorbitantes. Simplificamos el proceso para darte un servicio premium a un precio más accesible.</p>
+      </div>
+      <div data-reveal data-reveal-delay="120" style="background:#fff;border:1px solid #e6e9ec;border-radius:16px;padding:42px 34px;transition:transform .3s,box-shadow .3s,border-color .3s" style-hover="transform:translateY(-8px);box-shadow:0 24px 50px -22px rgba(56,73,91,.4);border-color:#d6dce0">
+        <div style="width:74px;height:74px;border-radius:16px;background:#f7f2eb;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://foco.cl/wp-content/uploads/2025/03/servicios-rrss.png" alt="" style="width:44px;height:44px;object-fit:contain">
+        </div>
+        <h3 style="font-family:'Outfit';font-weight:700;font-size:19px;letter-spacing:.3px;color:#38495b;margin-bottom:13px">Flexibilidad multiplataforma</h3>
+        <p style="font-size:15px;color:#6b7884;line-height:1.7">Transmite en vivo a través de tus propias redes sociales y con tu identidad corporativa. La señal puede replicarse en diversas plataformas y páginas web.</p>
+      </div>
+      <div data-reveal data-reveal-delay="240" style="background:#fff;border:1px solid #e6e9ec;border-radius:16px;padding:42px 34px;transition:transform .3s,box-shadow .3s,border-color .3s" style-hover="transform:translateY(-8px);box-shadow:0 24px 50px -22px rgba(56,73,91,.4);border-color:#d6dce0">
+        <div style="width:74px;height:74px;border-radius:16px;background:#f7f2eb;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+          <img src="https://foco.cl/wp-content/uploads/2025/03/servicios-sustentable.png" alt="" style="width:44px;height:44px;object-fit:contain">
+        </div>
+        <h3 style="font-family:'Outfit';font-weight:700;font-size:19px;letter-spacing:.3px;color:#38495b;margin-bottom:13px">Movilidad sustentable</h3>
+        <p style="font-size:15px;color:#6b7884;line-height:1.7">Nos movilizamos en bicicletas de carga, eliminando emisiones de gases y prescindiendo de grandes espacios de estacionamiento de vehículos motorizados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:96px 0;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;gap:70px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1 1 400px;min-width:300px" data-reveal>
+        <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9c8164">Desde 2003</span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.08;letter-spacing:-1px;color:#38495b;margin:14px 0 22px">Experiencia</h2>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75;margin-bottom:18px">Somos un equipo apasionado del mundo audiovisual, en constante evolución desde nuestros inicios en 2003. Hemos acumulado una extensa experiencia en filmación, producción y transmisión de eventos en vivo.</p>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75;margin-bottom:32px">Sea una conferencia, una charla, un lanzamiento, una reunión o una graduación: nos encargamos de la transmisión para que tú te enfoques en el contenido.</p>
+        <a href="experiencia.html" style="display:inline-flex;align-items:center;gap:9px;font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.6px;text-transform:uppercase;color:#1fc299;border:2px solid #1fc299;padding:14px 26px;border-radius:11px;transition:background .25s,color .25s,transform .2s" style-hover="background:#1fc299;color:#fff;transform:translateY(-2px)">Mira nuestros videos →</a>
+      </div>
+      <div style="flex:1 1 400px;min-width:300px" data-reveal data-reveal-delay="150">
+        <img src="uploads/bicipoloenvivo.jpeg" alt="Setup de transmisión multicámara en torneo de bicipolo" style="width:100%;height:420px;object-fit:cover;border-radius:16px;box-shadow:0 24px 50px -24px rgba(56,73,91,.5)">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:96px 0;background:#f5f6f7">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;gap:70px;align-items:center;flex-wrap:wrap-reverse">
+      <div style="flex:1 1 400px;min-width:300px" data-reveal data-reveal-delay="150">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/cultocio-1-scaled.jpg" alt="Transmisión de evento en vivo" style="width:100%;height:420px;object-fit:cover;border-radius:16px;box-shadow:0 24px 50px -24px rgba(56,73,91,.5)">
+      </div>
+      <div style="flex:1 1 400px;min-width:300px" data-reveal>
+        <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9c8164">Formato televisivo</span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.08;letter-spacing:-1px;color:#38495b;margin:14px 0 22px">Streaming</h2>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75;margin-bottom:18px">¿Organizas un seminario, lanzamiento, concierto o ceremonia y quieres darle un realce especial? Te ofrecemos la solución perfecta para que tu evento llegue a un público más amplio.</p>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75;margin-bottom:32px">Transmitimos en tiempo real, en formato televisivo y en alta calidad, para una experiencia única y envolvente: como si tus espectadores estuvieran presentes.</p>
+        <a href="servicios.html" style="display:inline-flex;align-items:center;gap:9px;font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.6px;text-transform:uppercase;color:#1fc299;border:2px solid #1fc299;padding:14px 26px;border-radius:11px;transition:background .25s,color .25s,transform .2s" style-hover="background:#1fc299;color:#fff;transform:translateY(-2px)">Más información →</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:96px 0;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;gap:70px;align-items:center;flex-wrap:wrap">
+      <div style="flex:1 1 400px;min-width:300px" data-reveal>
+        <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9c8164">Más allá del streaming</span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.08;letter-spacing:-1px;color:#38495b;margin:14px 0 22px">Servicios audiovisuales</h2>
+        <p style="font-size:16px;color:#6b7884;line-height:1.75;margin-bottom:24px">Nos especializamos en la transmisión en vivo, pero también ofrecemos registro audiovisual de todo tipo de eventos:</p>
+        <ul style="list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:13px 24px;margin-bottom:34px">
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>Transmisión en vivo</li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>CCTV para eventos</li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>Grabación de matrimonios</li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>Videos corporativos</li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>Registro de conferencias</li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>Congresos y seminarios</li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:15px;color:#465563;font-weight:500"><span style="color:#1fc299;font-weight:800">✓</span>Filmación de licenciaturas</li>
+        </ul>
+        <a href="servicios.html" style="display:inline-flex;align-items:center;gap:9px;font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.6px;text-transform:uppercase;color:#1fc299;border:2px solid #1fc299;padding:14px 26px;border-radius:11px;transition:background .25s,color .25s,transform .2s" style-hover="background:#1fc299;color:#fff;transform:translateY(-2px)">Ver servicios →</a>
+      </div>
+      <div style="flex:1 1 400px;min-width:300px" data-reveal data-reveal-delay="150">
+        <img src="https://foco.cl/wp-content/uploads/2025/03/UDLA-1-scaled.jpg" alt="Cámara registrando un panel" style="width:100%;height:420px;object-fit:cover;border-radius:16px;box-shadow:0 24px 50px -24px rgba(56,73,91,.5)">
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="background:linear-gradient(160deg,#3d4f61 0%,#2f3e4e 100%);padding:96px 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;margin-bottom:56px" data-reveal>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(30px,4vw,46px);letter-spacing:-1px;color:#fff;margin-bottom:14px">¿Cómo te podemos ayudar?</h2>
+        <p style="font-size:17px;color:#b9c4cd;max-width:600px;margin:0 auto">¿Necesitas transmitir tu evento en vivo? Completa el formulario, escríbenos por WhatsApp o envíanos un correo. Conversemos sobre cómo hacer que tu evento llegue a más personas.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;max-width:760px;margin:0 auto">
+        <div style="display:flex;gap:18px;flex-wrap:wrap" data-reveal>
+          <a href="https://wa.me/56976157196" target="_blank" style="flex:1 1 240px;display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px 26px;transition:transform .25s,background .25s" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.1)">
+            <span style="width:54px;height:54px;border-radius:14px;background:#25d366;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:26px">💬</span>
+            <span style="display:flex;flex-direction:column;gap:3px">
+              <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#8fd0b8">WhatsApp</span>
+              <span style="font-family:'Outfit';font-weight:700;font-size:20px;color:#fff">+56 9 7615 7196</span>
+            </span>
+          </a>
+          <a href="mailto:contacto@foco.cl" style="flex:1 1 240px;display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px 26px;transition:transform .25s,background .25s" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.1)">
+            <span style="width:54px;height:54px;border-radius:14px;background:#1fc299;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:24px">✉️</span>
+            <span style="display:flex;flex-direction:column;gap:3px">
+              <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#8fd0b8">Correo</span>
+              <span style="font-family:'Outfit';font-weight:700;font-size:20px;color:#fff">contacto@foco.cl</span>
+            </span>
+          </a>
+        </div>
+
+        <div style="width:100%;background:#fff;border-radius:20px;padding:38px 36px;box-shadow:0 30px 70px -25px rgba(0,0,0,.5)" data-reveal data-reveal-delay="150">
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 10px">
+              <div style="width:72px;height:72px;border-radius:50%;background:#e7f9f3;display:flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:22px">✓</div>
+              <h3 style="font-family:'Outfit';font-weight:700;font-size:24px;color:#38495b;margin-bottom:10px">¡Mensaje enviado!</h3>
+              <p style="font-size:15px;color:#6b7884;line-height:1.6">Gracias por escribirnos. Te responderemos a la brevedad para conversar sobre tu evento.</p>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <div>
+              <h3 style="font-family:'Outfit';font-weight:700;font-size:22px;color:#38495b;margin-bottom:24px">Cuéntanos sobre tu evento</h3>
+              <div style="display:flex;flex-direction:column;gap:16px">
+                <label style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-family:'Outfit';font-weight:600;font-size:13px;color:#465563">Nombre *</span>
+                  <input value="{{ fNombre }}" onInput="{{ onNombre }}" placeholder="Tu nombre" style="font-family:'Mulish';font-size:15px;color:#34495e;padding:13px 15px;border:1.5px solid #e1e6ea;border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#1fc299;box-shadow:0 0 0 3px rgba(31,194,153,.15)">
+                  <sc-if value="{{ errNombre }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;color:#e15554">{{ errNombre }}</span></sc-if>
+                </label>
+                <label style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-family:'Outfit';font-weight:600;font-size:13px;color:#465563">Correo electrónico *</span>
+                  <input value="{{ fCorreo }}" onInput="{{ onCorreo }}" placeholder="tu@correo.cl" style="font-family:'Mulish';font-size:15px;color:#34495e;padding:13px 15px;border:1.5px solid #e1e6ea;border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#1fc299;box-shadow:0 0 0 3px rgba(31,194,153,.15)">
+                  <sc-if value="{{ errCorreo }}" hint-placeholder-val="{{ false }}"><span style="font-size:12.5px;color:#e15554">{{ errCorreo }}</span></sc-if>
+                </label>
+                <label style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-family:'Outfit';font-weight:600;font-size:13px;color:#465563">Teléfono</span>
+                  <input value="{{ fTelefono }}" onInput="{{ onTelefono }}" placeholder="+56 9 ..." style="font-family:'Mulish';font-size:15px;color:#34495e;padding:13px 15px;border:1.5px solid #e1e6ea;border-radius:10px;outline:none;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#1fc299;box-shadow:0 0 0 3px rgba(31,194,153,.15)">
+                </label>
+                <label style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-family:'Outfit';font-weight:600;font-size:13px;color:#465563">Mensaje</span>
+                  <textarea value="{{ fMensaje }}" onInput="{{ onMensaje }}" rows="4" placeholder="Cuéntanos sobre tu evento..." style="font-family:'Mulish';font-size:15px;color:#34495e;padding:13px 15px;border:1.5px solid #e1e6ea;border-radius:10px;outline:none;resize:vertical;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#1fc299;box-shadow:0 0 0 3px rgba(31,194,153,.15)"></textarea>
+                </label>
+                <button onClick="{{ onSubmit }}" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#1fc299;border:none;padding:16px;border-radius:11px;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 10px 26px -8px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);background:#19b389;box-shadow:0 16px 32px -10px rgba(31,194,153,.7)">Enviar correo</button>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#283643;padding:54px 0 38px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap">
+      <a href="index.html" style="display:flex;align-items:center"><img src="logo-foco.png" alt="foco" style="height:46px;width:auto;display:block"></a>
+      <nav style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="index.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Inicio</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Servicios</a>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Experiencia</a>
+        <a href="#contacto" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Contacto</a>
+      </nav>
+      <div style="display:flex;gap:12px">
+        <a href="http://instagram.com/focoenvivo.cl" target="_blank" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s,transform .2s" style-hover="background:#1fc299;transform:translateY(-3px)">📷</a>
+        <a href="http://facebook.com/foco.cl" target="_blank" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s,transform .2s" style-hover="background:#1fc299;transform:translateY(-3px)">f</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:32px auto 0;padding:24px 32px 0;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <span style="font-size:13px;color:#7b8893">© 2026 focoenvivo.cl / foco.cl · Streaming y proyectos audiovisuales · Santiago, Chile</span>
+      <span style="font-size:13px;color:#7b8893">Filmando, produciendo y transmitiendo desde 2003</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { scrolled: false, nombre: '', correo: '', telefono: '', mensaje: '', errN: '', errC: '', sent: false };
+
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const apply = () => {
+      els.forEach(el => {
+        const d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+        el.style.animation = 'focoReveal .85s cubic-bezier(.16,.84,.44,1) ' + d + 'ms both';
+      });
+    };
+    apply();
+    requestAnimationFrame(apply);
+    // safety net: guarantee visibility even if CSS animations don't run
+    this._safety = setTimeout(() => {
+      els.forEach(el => { el.style.animation = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; });
+    }, 1700);
+    this._onScroll = () => {
+      const s = window.scrollY > 20;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._safety) clearTimeout(this._safety);
+  }
+
+  submit = () => {
+    const errN = this.state.nombre.trim() ? '' : 'Ingresa tu nombre.';
+    const correo = this.state.correo.trim();
+    const errC = !correo ? 'Ingresa tu correo.' : (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo) ? '' : 'Correo no válido.');
+    if (errN || errC) { this.setState({ errN, errC }); return; }
+    this.setState({ sent: true, errN: '', errC: '' });
+  };
+
+  renderVals() {
+    return {
+      headerStyle: 'position:sticky;top:0;z-index:50;background:rgba(255,255,255,' + (this.state.scrolled ? '.92' : '1') + ');backdrop-filter:blur(10px);border-bottom:1px solid ' + (this.state.scrolled ? '#e6e9ec' : 'transparent') + ';box-shadow:' + (this.state.scrolled ? '0 6px 24px -16px rgba(56,73,91,.5)' : 'none') + ';transition:box-shadow .3s,border-color .3s,background .3s',
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      fNombre: this.state.nombre,
+      fCorreo: this.state.correo,
+      fTelefono: this.state.telefono,
+      fMensaje: this.state.mensaje,
+      errNombre: this.state.errN,
+      errCorreo: this.state.errC,
+      onNombre: (e) => this.setState({ nombre: e.target.value }),
+      onCorreo: (e) => this.setState({ correo: e.target.value }),
+      onTelefono: (e) => this.setState({ telefono: e.target.value }),
+      onMensaje: (e) => this.setState({ mensaje: e.target.value }),
+      onSubmit: this.submit,
+    };
+  }
+}
+</script>
+</body>
+</html>

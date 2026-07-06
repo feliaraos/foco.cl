@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mulish',system-ui,sans-serif;color:#5d6b78;background:#ffffff;-webkit-font-smoothing:antialiased;line-height:1.65}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  button{font-family:inherit}
+  ::selection{background:#1fc299;color:#fff}
+  @keyframes focoPulse{0%,100%{opacity:1}50%{opacity:.45}}
+  @keyframes focoReveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  @keyframes focoFade{from{opacity:0}to{opacity:1}}
+  @keyframes focoZoom{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+</style>
+</helmet>
+<div style="overflow-x:hidden">
+
+  <header style="{{ headerStyle }}">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" style="display:flex;align-items:center"><img src="https://foco.cl/wp-content/uploads/2025/03/head-L-foco_cl-scaled-1.jpg" alt="foco.cl" style="height:48px;width:auto;display:block"></a>
+      <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+        <a href="index.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Inicio</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Servicios</a>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:600;font-size:15px;color:#1fc299;padding:8px 14px;border-radius:8px">Experiencia</a>
+        <a href="index.html#contacto" style="font-family:'Outfit';font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#1fc299;padding:11px 22px;border-radius:9px;margin-left:8px;transition:transform .2s,box-shadow .2s,background .2s;box-shadow:0 6px 18px -6px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(31,194,153,.7);background:#19b389">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position:relative;background:linear-gradient(160deg,#3d4f61 0%,#2f3e4e 100%);clip-path:polygon(0 0,100% 0,100% 94%,0 100%);padding:84px 0 78px">
+    <div style="max-width:940px;margin:0 auto;padding:0 32px" data-reveal>
+      <span style="font-family:'Outfit';font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#1fc299;margin-bottom:18px;display:block">Desde 2003</span>
+      <h1 style="font-family:'Outfit';font-weight:800;font-size:clamp(36px,5vw,58px);line-height:1.06;letter-spacing:-1.5px;color:#fff;margin-bottom:26px;text-wrap:balance">Un equipo apasionado del mundo audiovisual</h1>
+      <p style="font-size:17px;line-height:1.8;color:#c2ccd4;margin-bottom:16px">En constante evolución desde nuestros inicios en 2003, hemos acumulado una extensa experiencia en la filmación, producción y transmisión de eventos en vivo. Fuimos parte de la creación de programas de televisión, en roles de producción y coproducción, y nos especializamos en la filmación y edición de extensas horas de eventos corporativos y sociales.</p>
+      <p style="font-size:16px;line-height:1.8;color:#9fadb8">En etapas más recientes hemos centrado nuestros esfuerzos en la producción y transmisión de programas de entrevistas en vivo, fusionando nuestras habilidades audiovisuales con la dedicación al biciactivismo y la política. Nos destacamos por ofrecer un servicio de streaming profesional con compromiso, experiencia y profesionalismo en cada proyecto.</p>
+    </div>
+  </section>
+
+  <section style="padding:46px 0 10px;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px" data-reveal>
+      <div style="border:1px solid #e6e9ec;border-radius:15px;padding:26px 24px">
+        <div style="font-family:'Outfit';font-weight:800;font-size:38px;color:#1fc299;line-height:1">2003</div>
+        <div style="font-family:'Outfit';font-weight:600;font-size:14px;color:#38495b;margin-top:6px">desde nuestros inicios</div>
+      </div>
+      <div style="border:1px solid #e6e9ec;border-radius:15px;padding:26px 24px">
+        <div style="font-family:'Outfit';font-weight:800;font-size:38px;color:#1fc299;line-height:1">+20</div>
+        <div style="font-family:'Outfit';font-weight:600;font-size:14px;color:#38495b;margin-top:6px">años de trayectoria</div>
+      </div>
+      <div style="border:1px solid #e6e9ec;border-radius:15px;padding:26px 24px">
+        <div style="font-family:'Outfit';font-weight:800;font-size:38px;color:#1fc299;line-height:1">Multi</div>
+        <div style="font-family:'Outfit';font-weight:600;font-size:14px;color:#38495b;margin-top:6px">cámara, realización en vivo</div>
+      </div>
+      <div style="border:1px solid #e6e9ec;border-radius:15px;padding:26px 24px">
+        <div style="font-family:'Outfit';font-weight:800;font-size:38px;color:#1fc299;line-height:1">Vivo</div>
+        <div style="font-family:'Outfit';font-weight:600;font-size:14px;color:#38495b;margin-top:6px">YouTube · Instagram · Facebook</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:62px 0 90px;background:#fff">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px">
+      <div style="margin-bottom:38px" data-reveal>
+        <span style="font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9c8164">Nuestros trabajos</span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(28px,3.6vw,40px);line-height:1.12;letter-spacing:-1px;color:#38495b;margin-top:14px">Proyectos realizados</h2>
+        <p style="font-size:15px;color:#8593a0;margin-top:10px">Donde hay video, haz clic para reproducirlo. Los enlaces de prensa y listas de reproducción se abren en una pestaña nueva.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <div data-reveal-fade style="display:flex;flex-direction:column;background:#fff;border:1px solid #e6e9ec;border-radius:16px;overflow:hidden;transition:box-shadow .3s,border-color .3s" style-hover="box-shadow:0 24px 52px -26px rgba(56,73,91,.55);border-color:#d2d9de">
+
+            <sc-if value="{{ p.isVideo }}" hint-placeholder-val="{{ false }}">
+              <div onClick="{{ p.playMain }}" style="position:relative;aspect-ratio:16/9;background:#2f3e4e;cursor:pointer;overflow:hidden">
+                {{ p.thumbEl }}
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,28,36,0) 45%,rgba(20,28,36,.55) 100%);display:flex;align-items:center;justify-content:center">
+                  <span style="width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.5);transition:transform .25s,background .25s" style-hover="transform:scale(1.12);background:#1fc299"><span style="border-left:16px solid #2f3e4e;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:5px"></span></span>
+                </div>
+                <span style="position:absolute;top:12px;left:12px;font-family:'Outfit';font-weight:700;font-size:11px;letter-spacing:.5px;color:#fff;background:rgba(31,194,153,.95);padding:5px 11px;border-radius:20px">{{ p.cat }}</span>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ p.isImage }}" hint-placeholder-val="{{ false }}">
+              <div style="position:relative;aspect-ratio:16/9;background:#2f3e4e;overflow:hidden">
+                {{ p.thumbEl }}
+                <span style="position:absolute;top:12px;left:12px;font-family:'Outfit';font-weight:700;font-size:11px;letter-spacing:.5px;color:#fff;background:rgba(31,194,153,.95);padding:5px 11px;border-radius:20px">{{ p.cat }}</span>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ p.isPlaceholder }}" hint-placeholder-val="{{ false }}">
+              <div style="position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#3d4f61 0%,#2b3947 100%);overflow:hidden;display:flex;align-items:flex-end;padding:16px">
+                <span style="position:absolute;right:14px;top:-6px;font-family:'Outfit';font-weight:800;font-size:74px;line-height:1;color:rgba(255,255,255,.06);letter-spacing:-3px">{{ p.year }}</span>
+                <span style="position:absolute;left:18px;top:18px;width:9px;height:9px;border-radius:50%;background:#1fc299;animation:focoPulse 2.8s ease-in-out infinite"></span>
+                <span style="font-family:'Outfit';font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#bfeede;background:rgba(31,194,153,.18);border:1px solid rgba(31,194,153,.4);padding:5px 11px;border-radius:20px">{{ p.cat }}</span>
+              </div>
+            </sc-if>
+
+            <div style="padding:22px 24px 24px;flex:1;display:flex;flex-direction:column">
+              <h3 style="font-family:'Outfit';font-weight:700;font-size:17.5px;line-height:1.25;color:#38495b;margin-bottom:6px">{{ p.title }}</h3>
+              <div style="font-family:'Outfit';font-weight:600;font-size:13px;color:#9c8164;margin-bottom:13px">{{ p.sub }}</div>
+              <p style="font-size:14px;color:#6b7884;line-height:1.65">{{ p.desc }}</p>
+
+              <sc-if value="{{ p.hasPanel }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:14px;padding-top:13px;border-top:1px solid #eef1f3">
+                  <span style="font-family:'Outfit';font-weight:700;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:#9aa6b0;display:block;margin-bottom:5px">{{ p.panelLabel }}</span>
+                  <span style="font-size:13.5px;color:#5d6b78;line-height:1.55">{{ p.panel }}</span>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ p.hasVideos }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px">
+                  <sc-for list="{{ p.videos }}" as="v" hint-placeholder-count="2">
+                    <button onClick="{{ v.play }}" style="display:inline-flex;align-items:center;gap:7px;font-family:'Outfit';font-weight:600;font-size:12.5px;color:#38495b;background:#f0f3f4;border:1px solid #e3e8eb;padding:7px 13px;border-radius:8px;cursor:pointer;transition:background .2s,color .2s,border-color .2s" style-hover="background:#1fc299;color:#fff;border-color:#1fc299"><span style="border-left:8px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent"></span>{{ v.label }}</button>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ p.hasLinks }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+                  <sc-for list="{{ p.links }}" as="l" hint-placeholder-count="2">
+                    <a href="{{ l.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-family:'Outfit';font-weight:600;font-size:12.5px;color:#5d6b78;background:#fff;border:1px solid #dde3e7;padding:7px 13px;border-radius:8px;transition:color .2s,border-color .2s,background .2s" style-hover="color:#1fc299;border-color:#1fc299;background:#f4fbf9"><span style="font-size:13px;line-height:1">↗</span>{{ l.label }}</a>
+                  </sc-for>
+                </div>
+              </sc-if>
+
+              <div style="font-family:'Outfit';font-weight:600;font-size:12px;letter-spacing:.2px;color:#9aa6b0;margin-top:auto;padding-top:18px">{{ p.meta }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:88px 0;background:linear-gradient(160deg,#3d4f61 0%,#2f3e4e 100%)">
+    <div style="max-width:880px;margin:0 auto;padding:0 32px;text-align:center" data-reveal>
+      <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(28px,3.8vw,42px);letter-spacing:-1px;color:#fff;margin-bottom:16px;text-wrap:balance">Construyamos en conjunto tu próximo evento</h2>
+      <p style="font-size:17px;color:#b9c4cd;margin-bottom:34px;max-width:620px;margin-left:auto;margin-right:auto">Compromiso, experiencia y profesionalismo en cada proyecto. Cuéntanos qué tienes en mente.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="index.html#contacto" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#2f3e4e;background:#fff;padding:16px 30px;border-radius:11px;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)" style-hover="transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(0,0,0,.5)">Contáctanos</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#fff;border:2px solid rgba(255,255,255,.4);padding:14px 30px;border-radius:11px;transition:background .2s,border-color .2s" style-hover="background:rgba(255,255,255,.1);border-color:#fff">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#283643;padding:54px 0 38px">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap">
+      <a href="index.html" style="display:flex;align-items:center"><img src="logo-foco.png" alt="foco" style="height:46px;width:auto;display:block"></a>
+      <nav style="display:flex;gap:8px;flex-wrap:wrap">
+        <a href="index.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Inicio</a>
+        <a href="servicios.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Servicios</a>
+        <a href="experiencia.html" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Experiencia</a>
+        <a href="index.html#contacto" style="font-family:'Outfit';font-weight:500;font-size:14px;color:#aeb9c2;padding:6px 12px;border-radius:7px;transition:color .2s" style-hover="color:#1fc299">Contacto</a>
+      </nav>
+      <div style="display:flex;gap:12px">
+        <a href="http://instagram.com/focoenvivo.cl" target="_blank" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s,transform .2s" style-hover="background:#1fc299;transform:translateY(-3px)">📷</a>
+        <a href="http://facebook.com/foco.cl" target="_blank" style="width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .2s,transform .2s" style-hover="background:#1fc299;transform:translateY(-3px)">f</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:32px auto 0;padding:24px 32px 0;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <span style="font-size:13px;color:#7b8893">© 2026 focoenvivo.cl / foco.cl · Streaming y proyectos audiovisuales · Santiago, Chile</span>
+      <span style="font-size:13px;color:#7b8893">Filmando, produciendo y transmitiendo desde 2003</span>
+    </div>
+  </footer>
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeVideo }}" style="position:fixed;inset:0;z-index:200;background:rgba(15,21,27,.85);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;animation:focoFade .25s ease both">
+      <div onClick="{{ stop }}" style="position:relative;width:100%;max-width:960px;animation:focoZoom .3s cubic-bezier(.16,.84,.44,1) both">
+        <a href="{{ activeWatch }}" target="_blank" rel="noopener" style="position:absolute;top:-44px;left:0;font-family:'Outfit';font-weight:600;font-size:13px;color:#cdd6dd;display:inline-flex;align-items:center;gap:6px;transition:color .2s" style-hover="color:#fff">Ver en YouTube <span style="font-size:14px">↗</span></a>
+        <button onClick="{{ closeVideo }}" style="position:absolute;top:-46px;right:0;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:background .2s" style-hover="background:rgba(255,255,255,.25)">✕</button>
+        <div style="position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);background:#000">
+          <iframe src="{{ activeSrc }}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { scrolled: false, active: null };
+
+  PROJECTS = [
+    {
+      cat: 'Streaming', year: '2025',
+      title: 'Seminario Internacional de Nutrición Dibaq Sense',
+      sub: 'Transmisión en vivo multiformato — YouTube + Instagram',
+      desc: 'El 4 de noviembre de 2025 transmitimos el seminario con emisión simultánea en YouTube (horizontal) e Instagram Live (vertical): multicámara, switcher en tiempo real, integración de PPT y captura de audio desde sala, con grabación de respaldo.',
+      panelLabel: 'Expositores', panel: 'Dra. Genoveva Godoy · Elena Fernández Sánchez · Ahmed Magdy Sayed',
+      media: { type: 'video', id: '6PIsWGV8B1E', start: 875 }, meta: 'Mascotas Mercosur · Santiago · Nov 2025',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Deportivo', year: '2019–25',
+      title: 'Torneos de Bicipolo en Chile y Latinoamérica',
+      sub: 'Transmisión en vivo multicámara + registro audiovisual',
+      desc: 'Desde 2019 acompañamos la consolidación del Bici Polo en Chile: realización en tiempo real, gráficas y marcador en formato televisivo, y registro completo para archivo y difusión, adaptado a entornos deportivos al aire libre.',
+      media: { type: 'video', id: 'RCy3ZALQ4yA' }, meta: 'Santiago y Temuco · Comunidad Bicipolo Chile',
+      videos: [],
+      links: [
+        { label: 'Nacional 2024 — Temuco', url: 'https://www.youtube.com/playlist?list=PL8R1cdPvniwYbXopWUXF43eqRtchDqLGW' },
+        { label: 'Open Santiago 2024', url: 'https://www.youtube.com/playlist?list=PL8R1cdPvniwbCN_PDRaGX7mFdfbEo81Rf' },
+        { label: '6° Latinoamericano 2023', url: 'https://www.youtube.com/playlist?list=PL8R1cdPvniwaTuxbVGNgsxXdFQfCB2JHe' },
+        { label: 'Nacional 2023 — Santiago', url: 'https://www.youtube.com/playlist?list=PL8R1cdPvniwYlk_gnx2jw5iIaoi_3VW1X' },
+        { label: 'Fin del Mundo 2022', url: 'https://www.youtube.com/playlist?list=PL8R1cdPvniwYSDEeMH7TQzoBTbVFEk-s7' },
+        { label: 'Open Chile 2019', url: 'https://www.youtube.com/playlist?list=PL8R1cdPvniwaSSuFTkmoUF7dI3nVoRywU' },
+      ],
+    },
+    {
+      cat: 'Festival', year: '2022',
+      title: 'Festival Santiago en Bici — M100',
+      sub: 'Sonido en vivo + transmisión de actividades',
+      desc: 'Primer Festival Cletero de Santiago, autogestionado por y para ciclistas. Operamos el sonido en vivo de escenarios y espacios, y transmitimos conversatorios, charlas y paneles temáticos en Matucana 100.',
+      media: { type: 'video', id: 'CZO0aQ7W5HY', start: 386 }, meta: 'Viste la Bici · Matucana 100 · Nov 2022',
+      videos: [], links: [
+        { label: 'Revista Pedalea', url: 'https://revistapedalea.com/' },
+        { label: 'Matucana 100', url: 'https://www.m100.cl/' },
+      ],
+    },
+    {
+      cat: 'Político', year: '2022',
+      title: 'Encuentro de Gustavo Petro con la comunidad colombiana',
+      sub: 'Transmisión en vivo multicámara',
+      desc: 'El 10 de marzo de 2022, en el marco de su campaña presidencial, transmitimos en vivo por Facebook el encuentro en la sede de la CUT: discursos políticos, testimonios de migrantes y presentaciones musicales en vivo.',
+      media: { type: 'video', id: 'OAMKl1q9-H4', start: 1909 }, meta: 'Pacto Histórico Chile · Sede CUT, Santiago · Mar 2022',
+      videos: [], links: [{ label: 'Nota — El Ciudadano', url: 'https://www.elciudadano.com/chile/gustavo-petro-se-reunio-con-colombianos-residenciados-en-chile-y-llamo-a-construir-un-eje-progresista-de-nuevo-tipo-en-america-latina/03/11/' }],
+    },
+    {
+      cat: 'Entrevistas', year: '2025',
+      title: 'Candidaturas a la presidencia de Colo Colo 2025',
+      sub: 'Filmación multicámara para difusión digital',
+      desc: 'Cobertura encargada por La Cofradía para difundir las propuestas de las candidaturas a la presidencia del Club Social y Deportivo Colo Colo: filmación multicámara a cámara, coordinación de imagen y sonido, y edición para redes y YouTube.',
+      media: { type: 'video', id: 'sYYYdbpOZtg' }, meta: 'La Cofradía · Santiago · Feb 2025',
+      videos: [
+        { label: 'Alexsandra Santander', id: 'DP_K8mrz8HM' },
+        { label: 'Manuel López', id: 'EqAH10QVQw4' },
+        { label: 'Edmundo Valladares', id: 'sYYYdbpOZtg' },
+      ], links: [],
+    },
+    {
+      cat: 'Cultura', year: '2022',
+      title: '«La Constitución del pueblo para los Pueblos»',
+      sub: 'Cobertura en vivo de evento cultural y político',
+      desc: 'Jornada abierta y comunitaria en Plaza Yungay en apoyo a la primera propuesta de nueva Constitución. Cubrimos shows musicales, conversatorios y discursos al aire libre, con registro técnico de sonido e imagen en exteriores.',
+      panelLabel: 'En vivo', panel: 'Inti Illimani Histórico · Pancho Villa · La Chinganera · Mauricio Redolés',
+      media: { type: 'video', id: 'i-gDf1iRRuY' }, meta: 'Plaza Yungay, Santiago · Jul 2022',
+      videos: [], links: [
+        { label: 'La Voz de los que Sobran', url: 'https://lavozdelosquesobran.cl/hoy/la-constitucion-del-pueblo-para-los-pueblos-convencionales-independientes-explican-nueva-constitucion-en-evento-cultural/03072022' },
+        { label: 'El Ciudadano', url: 'https://www.elciudadano.com/actualidad/este-domingo-en-plaza-yungay-de-santiago-la-constitucion-del-pueblo-para-los-pueblos/07/01/' },
+      ],
+    },
+    {
+      cat: 'Cultura', year: '2022',
+      title: 'Lanzamiento del podcast «Cultocio»',
+      sub: 'Transmisión multicámara y sonido en vivo',
+      desc: 'Regreso de «Cultocio» —programa sobre artes, culturas y organizaciones sociales creado en 2007— en su nueva etapa digital. Realizamos sonido en vivo y transmisión multicámara del conversatorio y las presentaciones.',
+      media: { type: 'video', id: '-3sL814mePE' },
+      meta: 'Lab. Ciudadano de Independencia, Santiago · Oct 2022',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Lanzamiento', year: '2021',
+      title: 'Libro «Guía para la vida de una brujita»',
+      sub: 'Sonido en vivo y transmisión multicámara',
+      desc: 'Presentación en el Anfiteatro Bellas Artes: una celebración artística, afectiva y feminista con discursos de autoras y editoras, música en vivo de Francesca Santoro, lecturas poéticas y danza. Operamos sonido en vivo y transmisión multicámara.',
+      media: { type: 'video', id: 'avlt6vxWr0U' }, meta: 'Editorial Oso Liebre · Anfiteatro Bellas Artes · Dic 2021',
+      videos: [], links: [
+        { label: 'Tripantu.cl', url: 'https://tripantu.cl/products/guia-para-la-vida-de-una-brujita' },
+        { label: 'Editorial Oso Liebre', url: 'https://osoliebre.org/producto/guia-para-la-vida-de-una-brujita/' },
+      ],
+    },
+    {
+      cat: 'Danza', year: '2009',
+      title: '«Violeta del Alma» — Ballet Folklórico Antumapu',
+      sub: 'Filmación y edición audiovisual',
+      desc: 'Realización audiovisual de la obra que homenajea a Violeta Parra, en los 38 años del Ballet Folklórico Antumapu de la Universidad de Chile. Registro multicámara en vivo, edición y montaje enfocado en lo escénico y musical.',
+      media: { type: 'video', id: 'dMf_ZuaAMxw' }, meta: 'Ballet Antumapu, U. de Chile · Santiago · 2009',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Político', year: '2022',
+      title: 'Entrevista a Manuel Woldarsky — Proceso Constituyente',
+      sub: 'Filmación y realización para Ciclolumpen',
+      desc: 'Entrevista al convencional Manuel Woldarsky en la ex sede del Congreso Nacional, producida para Ciclolumpen para acercar el trabajo de la Convención a audiencias diversas. Filmación con sonido directo, edición y montaje para difusión digital.',
+      media: { type: 'video', id: '-N4PRFgtS14' }, meta: 'Ciclolumpen · Ex Congreso Nacional, Santiago · Feb 2022',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Música', year: '2009',
+      title: 'Lanzamiento en vivo de Ignacio Serrot — Sala SCD',
+      sub: 'Filmación multicámara y edición de show en vivo',
+      desc: 'Filmación multicámara y edición del concierto de lanzamiento del cantautor Ignacio Serrot en la Sala SCD Plaza Vespucio. El registro completo se trabajó en postproducción y se compiló en formato DVD.',
+      media: { type: 'video', id: 'arfIaEMSqTM' }, meta: 'Sala SCD Plaza Vespucio, Santiago · Ago 2009',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Político', year: '2022',
+      title: 'Conversatorio «Plurinacionalidad y el Futuro de Chile»',
+      sub: 'Filmación, edición y producción — Ciclolumpen',
+      desc: 'Capítulo del ciclo constituyente de Ciclolumpen sobre el concepto de plurinacionalidad, sus raíces y proyecciones. Filmación y transmisión multicámara, sonido directo e iluminación de interior, edición y montaje para plataformas digitales.',
+      panelLabel: 'Invitados', panel: 'Eric Chinga · Manuel Woldarsky · Dagoberto Carrasco · Alex Cádiz',
+      media: { type: 'video', id: 'khp-dxx_qXY' }, meta: 'Ciclolumpen · Santiago · Jun 2022',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Social', year: '2009',
+      title: 'Videos de matrimonio — filmación y circuito cerrado',
+      sub: 'Registro multicámara + circuito cerrado a pantallas',
+      desc: 'Registro audiovisual de matrimonios con multicámara y transmisión en circuito cerrado para pantallas gigantes: discursos, ceremonia y fiesta, con edición final en DVD y Blu-ray para entrega personalizada.',
+      media: { type: 'video', id: 'QaIS-l9ewzM' }, meta: 'Santiago · 2009',
+      videos: [
+        { label: 'Kahn-Correa — Sheraton', id: 'QaIS-l9ewzM' },
+        { label: 'Eitan y Pía — Manquehue', id: 'Zpcb3d-suG8' },
+      ], links: [],
+    },
+    {
+      cat: 'Corporativo', year: '2009',
+      title: 'Evento corporativo Salcobrand — CasaPiedra',
+      sub: 'Día Panamericano del Químico Farmacéutico',
+      desc: 'Registro del evento institucional de Salcobrand en CasaPiedra: filmación a dos cámaras con transmisión a pantallas gigantes, cubriendo presentaciones, discursos y premiaciones, con edición para difusión interna y archivo.',
+      media: { type: 'video', id: 'UsyKyvEA7Ac' }, meta: 'Centro de Eventos CasaPiedra, Santiago · Nov 2009',
+      videos: [], links: [],
+    },
+    {
+      cat: 'Música', year: '2008',
+      title: 'Shows en vivo — Golden Music Pub Restaurant',
+      sub: 'Filmación multicámara y sincronización A/V',
+      desc: 'Registro de presentaciones musicales en vivo en el pub restaurante Golden Music (Ñuñoa): captura multicámara y sincronización profesional de audio y video para difusión digital y archivo, capturando ambiente e interacción con el público.',
+      media: { type: 'video', id: '8M4z6ZevWcs' }, meta: 'Golden Music, Ñuñoa, Santiago · Fines de los 2000',
+      videos: [
+        { label: 'Peter Rock', id: '8M4z6ZevWcs' },
+        { label: 'Marco Aurelio', id: '6i9PdLCkIhQ' },
+        { label: 'Wildo', id: 'rO83iyT7gm0' },
+        { label: 'Pancho Aranda y Marco Aurelio', id: 'HENjnHtv0OQ' },
+        { label: 'Flor de Orquesta', id: 'E6AhazRK5hM' },
+        { label: 'José Manuel', id: 'blVDrV85WXo' },
+        { label: 'Patricio Aguilar', id: '0jcnlq4Y4Qo' },
+        { label: 'Grupo Corteza', id: 'OEFy8JlrZ-c' },
+        { label: 'Buddy Richard y Wildo', id: 'TjX7OuaNDpg' },
+      ],
+      links: [{ label: 'Playlist completa', url: 'https://www.youtube.com/playlist?list=PLfujSKlj41IxQjUj6W65OlhzFo3nUxcaO' }],
+    },
+  ];
+
+  componentDidMount() {
+    const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    const fades = Array.from(document.querySelectorAll('[data-reveal-fade]'));
+    const apply = () => {
+      reveals.forEach(el => {
+        const d = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+        el.style.animation = 'focoReveal .85s cubic-bezier(.16,.84,.44,1) ' + d + 'ms both';
+      });
+      fades.forEach((el, i) => { el.style.animation = 'focoFade .7s ease ' + Math.min(i * 45, 400) + 'ms both'; });
+    };
+    apply();
+    requestAnimationFrame(apply);
+    this._safety = setTimeout(() => {
+      [...reveals, ...fades].forEach(el => { el.style.animation = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; });
+    }, 1900);
+    this._onScroll = () => {
+      const s = window.scrollY > 20;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onKey = (e) => { if (e.key === 'Escape') this.setState({ active: null }); };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('keydown', this._onKey);
+    if (this._safety) clearTimeout(this._safety);
+  }
+
+  renderVals() {
+    const projects = this.PROJECTS.map(p => {
+      const isVideo = p.media.type === 'video';
+      const isImage = p.media.type === 'image';
+      const isPlaceholder = p.media.type === 'placeholder';
+      const thumb = isVideo ? ('https://img.youtube.com/vi/' + p.media.id + '/hqdefault.jpg') : (isImage ? p.media.src : '');
+      const thumbEl = (isVideo || isImage)
+        ? React.createElement('img', { src: thumb, alt: p.title, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } })
+        : null;
+      return {
+        ...p, isVideo, isImage, isPlaceholder, thumb, thumbEl,
+        playMain: isVideo ? () => this.setState({ active: { id: p.media.id, start: p.media.start || 0 } }) : null,
+        hasVideos: p.videos.length > 0,
+        hasLinks: p.links.length > 0,
+        hasPanel: !!p.panel,
+        videos: p.videos.map(v => ({ ...v, play: () => this.setState({ active: { id: v.id, start: v.start || 0 } }) })),
+      };
+    });
+    const a = this.state.active;
+    return {
+      headerStyle: 'position:sticky;top:0;z-index:50;background:rgba(255,255,255,' + (this.state.scrolled ? '.92' : '1') + ');backdrop-filter:blur(10px);border-bottom:1px solid ' + (this.state.scrolled ? '#e6e9ec' : 'transparent') + ';box-shadow:' + (this.state.scrolled ? '0 6px 24px -16px rgba(56,73,91,.5)' : 'none') + ';transition:box-shadow .3s,border-color .3s,background .3s',
+      projects,
+      modalOpen: !!a,
+      activeSrc: a ? ('https://www.youtube-nocookie.com/embed/' + a.id + '?autoplay=1&rel=0' + (a.start ? ('&start=' + a.start) : '')) : '',
+      activeWatch: a ? ('https://www.youtube.com/watch?v=' + a.id + (a.start ? ('&t=' + a.start) : '')) : '',
+      closeVideo: () => this.setState({ active: null }),
+      stop: (e) => e.stopPropagation(),
+    };
+  }
+}
+</script>
+</body>
+</html>
