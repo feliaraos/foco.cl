@@ -193,7 +193,8 @@
                   <span style="font-family:'Outfit';font-weight:600;font-size:13px;color:#465563">Mensaje</span>
                   <textarea value="{{ fMensaje }}" onInput="{{ onMensaje }}" rows="4" placeholder="Cuéntanos sobre tu evento..." style="font-family:'Mulish';font-size:15px;color:#34495e;padding:13px 15px;border:1.5px solid #e1e6ea;border-radius:10px;outline:none;resize:vertical;transition:border-color .2s,box-shadow .2s" style-focus="border-color:#1fc299;box-shadow:0 0 0 3px rgba(31,194,153,.15)"></textarea>
                 </label>
-                <button onClick="{{ onSubmit }}" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#1fc299;border:none;padding:16px;border-radius:11px;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 10px 26px -8px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);background:#19b389;box-shadow:0 16px 32px -10px rgba(31,194,153,.7)">Enviar correo</button>
+                <button onClick="{{ onSubmit }}" style="font-family:'Outfit';font-weight:700;font-size:15px;letter-spacing:.5px;text-transform:uppercase;color:#fff;background:#1fc299;border:none;padding:16px;border-radius:11px;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;box-shadow:0 10px 26px -8px rgba(31,194,153,.6)" style-hover="transform:translateY(-2px);background:#19b389;box-shadow:0 16px 32px -10px rgba(31,194,153,.7)">{{ submitLabel }}</button>
+                <sc-if value="{{ errGeneral }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px;color:#e15554;text-align:center;display:block">{{ errGeneral }}</span></sc-if>
               </div>
             </div>
           </sc-if>
@@ -226,7 +227,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
 class Component extends DCLogic {
-  state = { scrolled: false, nombre: '', correo: '', telefono: '', mensaje: '', errN: '', errC: '', sent: false };
+  state = { scrolled: false, nombre: '', correo: '', telefono: '', mensaje: '', errN: '', errC: '', errG: '', sending: false, sent: false };
 
   componentDidMount() {
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
@@ -265,11 +266,40 @@ class Component extends DCLogic {
   }
 
   submit = () => {
+    if (this.state.sending) return;
     const errN = this.state.nombre.trim() ? '' : 'Ingresa tu nombre.';
     const correo = this.state.correo.trim();
     const errC = !correo ? 'Ingresa tu correo.' : (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo) ? '' : 'Correo no válido.');
     if (errN || errC) { this.setState({ errN, errC }); return; }
-    this.setState({ sent: true, errN: '', errC: '' });
+    this.setState({ sending: true, errN: '', errC: '', errG: '' });
+    // Envio real via FormSubmit.co (sin backend propio). El endpoint /ajax/
+    // devuelve JSON con CORS habilitado; funciona servido por http(s) (GitHub
+    // Pages), no desde file://. La 1a vez FormSubmit envia un correo de
+    // activacion a contacto@foco.cl que hay que confirmar una sola vez.
+    fetch('https://formsubmit.co/ajax/contacto@foco.cl', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        Nombre: this.state.nombre.trim(),
+        Correo: correo,
+        Telefono: this.state.telefono.trim(),
+        Mensaje: this.state.mensaje.trim(),
+        _replyto: correo,
+        _subject: 'Nuevo contacto desde foco.cl',
+        _template: 'table',
+      }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data && (data.success === 'true' || data.success === true)) {
+          this.setState({ sent: true, sending: false });
+        } else {
+          this.setState({ sending: false, errG: 'No pudimos enviar el mensaje. Escríbenos a contacto@foco.cl o por WhatsApp.' });
+        }
+      })
+      .catch(() => {
+        this.setState({ sending: false, errG: 'No pudimos enviar el mensaje. Escríbenos a contacto@foco.cl o por WhatsApp.' });
+      });
   };
 
   renderVals() {
@@ -283,6 +313,8 @@ class Component extends DCLogic {
       fMensaje: this.state.mensaje,
       errNombre: this.state.errN,
       errCorreo: this.state.errC,
+      errGeneral: this.state.errG,
+      submitLabel: this.state.sending ? 'Enviando…' : 'Enviar correo',
       onNombre: (e) => this.setState({ nombre: e.target.value }),
       onCorreo: (e) => this.setState({ correo: e.target.value }),
       onTelefono: (e) => this.setState({ telefono: e.target.value }),
