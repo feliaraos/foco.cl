@@ -20,13 +20,19 @@
   ::selection{background:#1fc299;color:#fff}
   @keyframes focoPulse{0%,100%{opacity:1}50%{opacity:.45}}
   @keyframes focoReveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  .brand{flex-shrink:0}
+  @media (max-width:760px){
+    .sitebar{height:auto!important;padding:12px 20px!important;justify-content:center!important;flex-wrap:wrap;gap:10px 16px!important}
+    .sitebar>nav{width:100%;justify-content:center}
+    .sitebar>nav a[href*="#contacto"]{margin-left:0!important}
+  }
 </style>
 </helmet>
 <div style="overflow-x:hidden">
 
   <header style="{{ headerStyle }}">
-    <div style="max-width:1180px;margin:0 auto;padding:0 32px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="index.html" style="display:flex;align-items:center"><img src="uploads/head-L-foco_cl-scaled-1.jpg" alt="foco.cl" style="height:48px;width:auto;display:block"></a>
+    <div class="sitebar" style="max-width:1180px;margin:0 auto;padding:0 32px;height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="index.html" class="brand" style="display:flex;align-items:center"><img src="uploads/head-L-foco_cl-scaled-1.jpg" alt="foco.cl" style="height:48px;width:auto;display:block"></a>
       <nav style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
         <a href="index.html" style="font-family:'Outfit';font-weight:500;font-size:15px;color:#38495b;padding:8px 14px;border-radius:8px;transition:color .2s,background .2s" style-hover="color:#1fc299;background:#f1f4f5">Inicio</a>
         <a href="servicios.html" style="font-family:'Outfit';font-weight:600;font-size:15px;color:#1fc299;padding:8px 14px;border-radius:8px">Servicios</a>
