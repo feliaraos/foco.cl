@@ -247,6 +247,17 @@ class Component extends DCLogic {
       if (s !== this.state.scrolled) this.setState({ scrolled: s });
     };
     window.addEventListener('scroll', this._onScroll, { passive: true });
+    // Scroll al ancla (ej. #contacto) tras montar: el runtime renderiza despues
+    // de la carga, por eso la navegacion nativa con hash no encuentra el destino
+    // cuando se llega desde otra pagina (servicios/experiencia/footer).
+    if (location.hash && location.hash.length > 1) {
+      const target = document.getElementById(location.hash.slice(1));
+      if (target) {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }));
+      }
+    }
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScroll);
